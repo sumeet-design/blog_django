@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+{% for blog in mera_blog %}
+
+<a href="{% url 'post_detail' blog.pk %}">{{blog.title}}</a>
+<h5>{{blog.body}}</h5>
+{% endfor %}
+
+<!-- here i will  do feteching data from database  -->
+
+{% endblock content %}
